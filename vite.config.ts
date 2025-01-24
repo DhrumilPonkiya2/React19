@@ -22,9 +22,9 @@ export default defineConfig({
         const eslint = new ESLint();
         const results = await eslint.lintFiles("./src/**/*.{js,jsx,ts,tsx}");
         const formatter = await eslint.loadFormatter("stylish");
-        const resultText = formatter.format(results);
+        const resultText = await formatter.format(results);
 
-        console.log(resultText);
+        resultText && console.log(resultText);
       },
     },
   ],
