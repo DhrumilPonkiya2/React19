@@ -1,14 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import reactLogo from "@assets/images/react.svg";
 import viteLogo from "/vite.svg";
-import "@assets/styles/App.css";
 
 const Demo = () => {
   const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    console.log(count);
-  }, []);
 
   return (
     <>
